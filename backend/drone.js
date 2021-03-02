@@ -25,3 +25,7 @@ function handleError(err) {
 drone.send('command', 0, 7, PORT, HOST, handleError);
 drone.send('battery?', 0, 8, PORT, HOST, handleError);
 
+/* My first try to build a connection between drone and PC. It was successuful and I build up the connection, 
+  but after that I lose it and can't build it again, will try to find what is the problem or will create 
+  or find some another solution. */ 
+
