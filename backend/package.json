@@ -1,0 +1,29 @@
+{
+  "name": "webinterfacefuerdrohne",
+  "version": "1.0.0",
+  "description": "Ipa-Projekt ",
+  "main": "drone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Milos Jovanovic",
+  "license": "ISC",
+  "dependencies": {
+    "dji-tello": "^1.0.15",
+    "express": "^4.17.1",
+    "host": "^0.0.1",
+    "loader": "^2.1.1",
+    "lodash": "^4.17.21",
+    "socket.io": "^3.1.2",
+    "t30": "^0.1.0",
+    "t3o": "^0.1.1",
+    "tello-drone": "^3.0.6",
+    "tellojs": "^0.1.113",
+    "waait": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "nodemon": "^2.0.7"
+  }
+}
