@@ -1,0 +1,25 @@
+{
+  "name": "ipa-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -p 7759c",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Milos Jovanovic",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.9.2",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "lodash.isfunction": "^3.0.9",
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "socket.io-client": "^2.1.1",
+    "styled-components": "^4.1.1"
+  
+  }
+}
