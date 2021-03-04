@@ -20,8 +20,6 @@ droneState.bind(8890);
 
 drone.on("message", (message) => {
   console.log(`--> : ${message}`);
-
-  // io.sockets.emit('status', message.toString());
 });
 
 function handleError(err) {
@@ -30,10 +28,6 @@ function handleError(err) {
     console.log(err);
   }
 }
-
-const commands = ["command", "battery?", "takeoff", "land", "flip l", "down x"];
-
-const i = 0;
 
 drone.send("command", 0, "command".length, PORT, HOST, handleError);
 
