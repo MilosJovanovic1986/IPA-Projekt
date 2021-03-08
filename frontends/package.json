@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "next -p 7759c",
     "build": "next build",
+    "build:css": "postcss src/style/tailwind.css -o src/style/main.css",
+    "build:watch": "postcss src/tailwind.css -o src/main.css --watch",
+    "lint": "npm run eslint -- js,jsx,json",
+    "format": "npm run format:js && npm run format:css",
+    "format:js": "npm run lint -- --fix",
     "start": "next start"
   },
   "author": "Milos Jovanovic",
@@ -16,14 +21,19 @@
     "lodash": "^4.17.21",
     "lodash.isfunction": "^3.0.9",
     "next": "^10.0.7",
+    "postcss-cli": "^8.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "socket.io-client": "^2.1.1",
     "styled-components": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
     "postcss": "^8.2.7",
+    "postcss-preset-env": "^6.7.0",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^2.0.3"
   }

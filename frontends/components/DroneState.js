@@ -1,10 +1,10 @@
 import socket from "../socket";
 import { useState, useEffect } from "react";
+import { BiWifiOff } from "react-icons/bi";
 
 function useDroneState() {
   const [droneState, updateDroneState] = useState([]);
   useEffect(() => {
-    console.log("hey");
     socket.on("dronestate", updateDroneState);
   }, []);
 
@@ -12,27 +12,37 @@ function useDroneState() {
 }
 
 function useSocket() {
-  const [status, updateStatus] = useState("DISCONNECTED");
+  const [status, updateStatus] = useState(
+    <span>
+      <p>
+        <strong>DISCONNECTED:</strong>
+        <BiWifiOff />
+        You're disconnected from server, please connect you to backend server
+        typing npm start in your backend directory!
+      </p>
+    </span>
+  );
   useEffect(() => {
     socket.on("status", updateStatus);
   }, []);
   return status;
 }
-//     socket.on('status', message => {
-//         console.log('Message from socket');
-//         updateStatus(message);
-//     });
-//     return status;
-// }
+
 const DroneState = () => {
   const status = useSocket();
   const droneState = useDroneState([]);
-  // console.log(droneState);
   return (
-    <div>
-      <p>Status: {status}</p>
-      <p>Drone State: {droneState}</p>
-      Drone state
+    <div className="grid grid-cols-1 gap-3 px-10 py-10 rounded-lg text-black bg-gray-300">
+      <div>
+        <p>
+          Status:<span className="text-black font-bold">{status}</span>
+        </p>
+      </div>
+      <div className=" w-screen">
+        <p className="font-bold">
+          Drone State:<span className="text-green-700">{droneState}</span>
+        </p>
+      </div>
     </div>
   );
 };
