@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-flip {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700;
+  }
+  .btn-takeoff {
+    @apply py-2 px-4 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-300;
+  }
+
+  .btn-land {
+    @apply py-2 px-4 bg-green-400 text-white text-center font-semibold rounded-lg shadow-md hover:bg-red-700;
+  }
+  .btn-direction {
+    @apply py-2 px-4 bg-pink-500 text-white font-semibold rounded-lg shadow-md hover:bg-pink-700;
+  }
+  .btn-upDown {
+    @apply py-2 px-4 bg-gray-400 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600;
+  }
+  .btn-emergency {
+    @apply py-2 px-32 text-white bg-yellow-500 font-semibold rounded-lg shadow-md hover:bg-yellow-700;
+  }
+}
