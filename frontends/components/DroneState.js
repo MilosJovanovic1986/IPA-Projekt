@@ -35,12 +35,13 @@ const DroneState = () => {
     <div className="grid grid-cols-1 gap-3 px-10 py-10 rounded-lg text-black bg-gray-300">
       <div>
         <p>
-          Status:<span className="text-black font-bold">{status}</span>
+          <strong>Status: </strong>
+          <span className="text-black font-bold">{status}</span>
         </p>
       </div>
       <div className=" w-screen">
         <p className="font-bold">
-          Drone State:<span className="text-green-700">{droneState}</span>
+          Drone State: <span className="text-green-700">{droneState}</span>
         </p>
       </div>
     </div>

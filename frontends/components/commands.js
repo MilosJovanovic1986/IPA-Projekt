@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import socket from "../socket";
 import { MdFlightLand, MdFlightTakeoff, MdForward } from "react-icons/md";
 import {

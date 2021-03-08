@@ -1,7 +1,6 @@
-*
-!.gitignore
 node_modules/
-.next/
+*/.next/*
+.next/*
 package-lock.json
 
 
