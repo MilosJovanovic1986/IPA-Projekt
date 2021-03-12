@@ -1,5 +1,5 @@
 import socket from "../socket";
-import { MdFlightLand, MdFlightTakeoff, MdForward } from "react-icons/md";
+import { MdFlightLand, MdFlightTakeoff } from "react-icons/md";
 import {
   HiArrowDown,
   HiArrowLeft,
