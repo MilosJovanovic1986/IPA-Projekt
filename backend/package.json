@@ -1,0 +1,23 @@
+{
+  "name": "webinterfacefuerdrohne",
+  "version": "1.0.0",
+  "description": "Ipa-Projekt ",
+  "main": "drone.js",
+  "scripts": {
+    "start": "nodemon drone.js",
+    "lint": "eslint --ext js,jsx .",
+    "format": "npm run lint -- --fix"
+  },
+  "author": "Milos Jovanovic",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "socket.io": "^2.2.0",
+    "waait": "^1.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "eslint": "^7.21.0"
+  }
+}
