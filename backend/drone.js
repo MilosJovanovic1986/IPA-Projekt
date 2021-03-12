@@ -6,6 +6,7 @@ const io = require("socket.io")(http);
 const throttle = require("lodash/throttle");
 const commandDelays = require("./commandDelays");
 
+// Connection to drone wia UPD
 const PORT = 8889;
 const HOST = "192.168.10.1";
 const drone = dgram.createSocket("udp4");
@@ -22,6 +23,7 @@ drone.on("message", (message) => {
   console.log(`--> : ${message}`);
 });
 
+// Call back Function
 function handleError(err) {
   if (err) {
     console.log("ERROR");
@@ -29,8 +31,10 @@ function handleError(err) {
   }
 }
 
+// To be able to send command to drone, wie need to send first "command", and then "command.length"
 drone.send("command", 0, "command".length, PORT, HOST, handleError);
 
+// Conection to socket server
 io.on("connection", (socket) => {
   socket.on("command", (command) => {
     console.log("command Sent from browser");
@@ -41,6 +45,7 @@ io.on("connection", (socket) => {
   socket.emit("status", "CONNECTED");
 });
 
+// Use lodash/throttle te catch dronestate
 droneState.on(
   "message",
   throttle((state) => {
@@ -49,6 +54,7 @@ droneState.on(
   }, 100)
 );
 
+// Socket server
 http.listen(7000, () => {
   console.log("Socket io server up and running");
 });

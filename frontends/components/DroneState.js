@@ -2,6 +2,7 @@ import socket from "../socket";
 import { useState, useEffect } from "react";
 import { BiWifiOff } from "react-icons/bi";
 
+// Using react Hooks
 function useDroneState() {
   const [droneState, updateDroneState] = useState([]);
   useEffect(() => {
@@ -11,6 +12,7 @@ function useDroneState() {
   return droneState;
 }
 
+// Connection to Backend server
 function useSocket() {
   const [status, updateStatus] = useState(
     <span>
