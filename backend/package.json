@@ -4,7 +4,9 @@
   "description": "Ipa-Projekt ",
   "main": "drone.js",
   "scripts": {
-    "start": "nodemon drone.js"
+    "start": "nodemon drone.js",
+    "lint": "eslint --ext js,jsx .",
+    "format": "npm run lint -- --fix"
   },
   "author": "Milos Jovanovic",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "waait": "^1.0.5"
   },
   "devDependencies": {
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "eslint": "^7.21.0"
   }
 }

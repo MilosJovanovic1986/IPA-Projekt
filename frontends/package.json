@@ -4,13 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p 7759c",
+    "dev": "next",
     "build": "next build",
-    "build:css": "postcss src/style/tailwind.css -o src/style/main.css",
-    "build:watch": "postcss src/tailwind.css -o src/main.css --watch",
-    "lint": "npm run eslint -- js,jsx,json",
-    "format": "npm run format:js",
-    "format:js": "npm run lint -- --fix",
+    "lint": "eslint --ext js,jsx .",
+    "format": "npm run lint -- --fix",
     "start": "next start"
   },
   "author": "Milos Jovanovic",
