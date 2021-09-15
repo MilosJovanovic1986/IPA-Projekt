@@ -31,7 +31,7 @@ function handleError(err) {
   }
 }
 
-// To be able to send command to drone, wie need to send first "command", and then "command.length"
+// To be able to send command to drone, we need first to send "command", and then "command.length"
 drone.send("command", 0, "command".length, PORT, HOST, handleError);
 
 // Conection to socket server
